@@ -1,8 +1,9 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const connectDB = require('./config/db');
-const routes = require('./routes');
-const chatAiRoute = require('./routes/chatAI.route'); // add this line
+import express from 'express';
+import dotenv from 'dotenv';
+import connectDB from './config/db.js';
+import routes from './routes/index.js';
+import chatAiRoute from './routes/chatAI.route.js';
+
 
 
 dotenv.config();

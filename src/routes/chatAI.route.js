@@ -1,8 +1,8 @@
-const express = require('express');
+import express from 'express';
+import { query } from '../controllers/chatAI.controller.js';
+
 const router = express.Router();
-const controller = require('../controllers/chatAI.controller');
 
-// POST /api/chatbot/query
-router.post('/chatbot', controller.query);
+router.post('/chatbot', query);
 
-module.exports = router;
+export default router;
