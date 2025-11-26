@@ -2,6 +2,8 @@ const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const routes = require('./routes');
+const chatAiRoute = require('./routes/chatAI.route'); // add this line
+
 
 dotenv.config();
 
@@ -16,6 +18,8 @@ connectDB();
 
 // Routes
 app.use('/api', routes);
+app.use('/api', chatAiRoute); // add this line
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
